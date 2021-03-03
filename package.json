@@ -1,0 +1,20 @@
+{
+  "name": "teste-estagio",
+  "version": "1.0.0",
+  "description": "Api restful para teste de estagio, da Nave.rs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Node",
+    "JS"
+  ],
+  "author": "Yuri Xavier",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^7.21.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1"
+  }
+}
