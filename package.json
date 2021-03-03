@@ -4,7 +4,7 @@
   "description": "Api restful para teste de estagio, da Nave.rs",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon ./src/server.js"
   },
   "keywords": [
     "Node",
@@ -15,6 +15,11 @@
   "devDependencies": {
     "eslint": "^7.21.0",
     "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.22.1"
+    "eslint-plugin-import": "^2.22.1",
+    "nodemon": "^2.0.7",
+    "sucrase": "^3.17.1"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
   }
 }
