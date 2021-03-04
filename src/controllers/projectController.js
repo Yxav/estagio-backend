@@ -1,38 +1,56 @@
+import Project from '../models/Project'
 class projectController {
 
   async index(req, res) {
-    res.status(200).send([
-      {
-          id: 3,
-          name: "Projeto muito Bom"
-      },
-      {
-          id: 5,
-          name: "Projeto Realmente Bom"
-      }
-  ])
+    try {
+      const response = await Project.query()
+      res.status(200).send(response)
+    } catch (error) {
+      res.status(400).send({ message: ':( An error has occurred' })
+    }
   }
 
   async show(req, res) {
-    res.send({
-      id: 3,
-      name: 'Projeto muito Bom',
-      navers: [
-        {
-          id: 1,
-          name: 'Fulano',
-          birthdate: '1998 - 06 - 12',
-          admission_date: '2020 - 06 - 12',
-          job_role: 'Desenvolvedor'
-        }
-      ]
-    })
+    const { id } = req.params
+
+    try {
+      const response = await Project.query().findOne({ id }).withGraphFetched('navers')
+      if (!response) return res.status(404).send({ message: 'Project not found' })
+
+      res.status(200).send(response)
+    } catch (error) {
+      res.status(400).send({ message: ':( An error has occurred' })
+
+    }
+
   }
 
   async store(req, res) {
-    // const { body } = req.body
-    console.log(req.body)
-    res.send(req.body)
+    try {
+      const { name, navers } = req.body
+
+      const project = await Project.query().insert({ name })
+
+      try {
+        await Project.relatedQuery('navers')
+          .for(project.id)
+          .relate(navers);
+      } catch (error) {
+        res.status(400).send({ error: 'Error in register project naver' })
+      }
+
+      res.status(200).send({
+        ...project,
+        navers
+      })
+
+
+    } catch (error) {
+      console.log(error)
+      res.status(400).send({ message: ':( An error has occurred' })
+
+    }
+
   }
 
 }
