@@ -1,42 +1,25 @@
+import Naver from '../models/Naver'
+
 class naverController {
   async index(req, res) {
-    res.status(200).send([
-      {
-        id: 1,
-        name: "Fulano",
-        birthdate: "1998-06-12",
-        admission_date: "2020-06-12",
-        job_role: "Desenvolvedor"
-      },
-      {
-        id: 2,
-        name: "Ciclano",
-        birthdate: "1998-06-12",
-        admission_date: "2018-06-12",
-        job_role: "Desenvolvedor"
-      }
-    ])
+    const navers = await Naver.query()
+    res.status(200).send(navers)
   }
 
   async show(req, res) {
-    res.send({
-      id: 1,
-      name: 'Fulano',
-      birthdate: '1998-06-12',
-      admission_date: '2020-06-12',
-      job_role: 'Desenvolvedor',
-      projects: [
-        {
-          id: 3,
-          name: 'Projeto muito Bom'
-        }
-      ]
-    })
+    const { id } = req.params
+    const response = await Naver.query().findById(id)
+    res.status(200).send(response)
   }
 
   async store(req, res) {
-    console.log(req.body)
     res.send(req.body)
+    try {
+      const response = await Naver.query().insert(req.body)
+      console.log(response)
+    } catch (error) {
+      console.error(error)
+    }
   }
 
 }
