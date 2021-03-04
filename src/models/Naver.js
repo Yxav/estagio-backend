@@ -3,7 +3,6 @@ import Knex from 'knex'
 
 import { development } from '../../knexfile'
 import './Project'
-import Project from './Project'
 
 
 Model.knex(Knex(development))
@@ -26,6 +25,11 @@ class Naver extends Model {
         to: 'projects.id'
       }
     }
+  }
+
+  $afterGet() {
+    this.birthdate = new Date().toISOString().split('T')[0]
+    this.admission_date = new Date().toISOString().split('T')[0]
   }
 }
 
