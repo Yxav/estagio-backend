@@ -27,9 +27,8 @@ API construída com Node.JS, PostgreSQL, Express e Knex.
 3. Execute o código para inserir os seeds: `npm run db:seed`
 3. Execute o código para rodar o projeto: `npm start`
 
-
-<!-- ## Insomnia
-[![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=back-end-challenge-nave&uri=https://raw.githubusercontent.com/Yxav/nave-back-end-challenge/master/Insomnia.json?token=ALTR6P3W7VUOPJO62FIFZ5S7F3KRW) -->
+## Insomnia
+[![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=back-end-challenge-nave&uri=https://raw.githubusercontent.com/Yxav/estagio-backend/main/doc-insomnia?token=ALTR6P3QI35WJ6UQPH2TSGTAIFBPA) 
 
 
 
