@@ -12,7 +12,6 @@ router.get('/', naverController.index)
 router.get('/:id', naverController.show)
 
 router.post('/', celebrate({
-
   [Segments.BODY]: Joi.object().keys({
     name: Joi.string().required(),
     birthdate: Joi.date().required(),
