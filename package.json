@@ -4,7 +4,13 @@
   "description": "Api restful para teste de estagio, da Nave.rs",
   "main": "app.js",
   "scripts": {
-    "dev": "nodemon ./src/server.js"
+
+    "dev": "nodemon ./src/server.js",
+    "db:migrate":"knex migrate:latest",
+    "db:rollback":"knex migrate:rollback",
+    "db:seed":"knex seed:run",
+    "build": "sucrase ./src -d ./dist --transforms imports",
+    "start": "npm run build && node dist/server.js"
   },
   "keywords": [
     "Node",
