@@ -30,8 +30,7 @@ module.exports = {
       directory: __dirname + '/src/database/seeds',
     },
     useNullAsDefault: true,
-    extra: {
-      ssl: true
+    ssl: true
  }
   },
 };
