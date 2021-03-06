@@ -4,9 +4,9 @@ exports.up = function (knex) {
   return knex.schema.createTable('navers', table => {
       table.increments('id').primary();
       table.string('name').notNullable();
-      table.string('job_role').notNullable();
       table.date('birthdate').notNullable().defaultTo(knex.raw('now()'));
       table.date('admission_date').notNullable().defaultTo(knex.raw('now()'));
+      table.string('job_role').notNullable();
 
     })
     .createTable('projects', table => {
