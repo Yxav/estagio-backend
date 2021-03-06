@@ -1,12 +1,12 @@
 import { Model } from 'objection'
 import Knex from 'knex'
 
-import { development } from '../../knexfile'
+import knexConfig from '../../knexfile'
+import { NODE_ENV } from '../config'
 import './Project'
 
-
-Model.knex(Knex(development))
-
+const knex = Knex(knexConfig[NODE_ENV])
+Model.knex(knex)
 class Naver extends Model {
   static get tableName() {
     return 'navers'
