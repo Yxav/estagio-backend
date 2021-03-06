@@ -1,5 +1,8 @@
 const dotenv = require('dotenv')
 const path = require('path');
+const pg = require('pg')
+
+pg.defaults.ssl = true
 
 dotenv.config({
   path: path.resolve(__dirname, './.env'),
@@ -22,10 +25,7 @@ module.exports = {
 
   production: {
     client: 'pg',
-    connectionString: process.env.DATABASE_URL,
-    ssl: {
-      rejectUnauthorized: false
-    },
+    connection: process.env.DATABASE_URL,
     migrations: {
       directory: __dirname + '/src/database/migrations',
     },
