@@ -13,7 +13,7 @@ dotenv.config()
 module.exports = {
   development: {
     client: 'pg',
-    connection: process.env.DATABASE_URL,
+    connection: process.env.DATABASE_URL?ssl:true,
     migrations: {
       directory: __dirname + '/src/database/migrations',
     },
