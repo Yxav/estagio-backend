@@ -33,6 +33,5 @@ module.exports = {
       directory: __dirname + '/src/database/seeds',
     },
     useNullAsDefault: true,
- }
   },
 };
