@@ -28,9 +28,7 @@ API construída com Node.JS, PostgreSQL, Express e Knex.
 3. Execute o código para rodar o projeto: `npm start`
 
 ## Insomnia
-[![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=back-end-challenge-nave&uri=https://raw.githubusercontent.com/Yxav/estagio-backend/main/doc-insomnia?token=ALTR6P3QI35WJ6UQPH2TSGTAIFBPA) 
-
-
+[![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=Teste%20Nave&uri=https%3A%2F%2Fraw.githubusercontent.com%2FYxav%2Festagio-backend%2Fmain%2Fdoc-insomnia%3Ftoken%3DALTR6PZC37M77ZAPSAI4GR3AIFD6U)
 
 
 
