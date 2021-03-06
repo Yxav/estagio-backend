@@ -10,10 +10,7 @@ dotenv.config()
 module.exports = {
   development: {
     client: 'pg',
-    connectionString: process.env.DATABASE_URL,
-    ssl: {
-        rejectUnauthorized: false
-    },
+    connection: process.env.DATABASE_URL,
     migrations: {
       directory: __dirname + '/src/database/migrations',
     },
@@ -25,7 +22,10 @@ module.exports = {
 
   production: {
     client: 'pg',
-    connection: pgconfig,
+    connectionString: process.env.DATABASE_URL,
+    ssl: {
+        rejectUnauthorized: false
+    },
     migrations: {
       directory: __dirname + '/src/database/migrations',
     },
