@@ -22,10 +22,12 @@ module.exports = {
 
   production: {
     client: 'pg',
-    connection: {
-      connectionString : process.env.DATABASE_URL,
-      ssl: false
-    },
+    connection:process.env.DATABASE_URL,
+    ssl: true,
+    extra: {
+      ssl: {
+        rejectUnauthorized: false,
+      },
     migrations: {
       directory: __dirname + '/src/database/migrations',
     },
