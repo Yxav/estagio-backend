@@ -23,12 +23,13 @@ API construída com Node.JS, PostgreSQL, Express e Knex.
 - CREATE DATABASE navetest
 - GRANT ALL PRIVILEGES ON DATABASE navetest to nave
 
-2. Execute o código de migrações: `npm run db:migrate`
-3. Execute o código para inserir os seeds: `npm run db:seed`
-3. Execute o código para rodar o projeto: `npm start`
+2. Faça uma cópia do arquivo .env-example, e renomeie para .env, depois complete com os dados acima
+3. Execute o código de migrações: `npm run db:migrate`
+4. Execute o código para inserir os seeds: `npm run db:seed`
+5. Execute o código para rodar o projeto: `npm start`
 
 ## Insomnia
-[![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=Teste%20Nave&uri=https%3A%2F%2Fraw.githubusercontent.com%2FYxav%2Festagio-backend%2Fmain%2Fdoc-insomnia%3Ftoken%3DALTR6PZC37M77ZAPSAI4GR3AIFD6U)
+[![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://raw.githubusercontent.com/Yxav/estagio-backend/main/doc-insomnia?token=ALTR6P4WYTPPKCZPQ26CKBLAILREK)
 
 
 
