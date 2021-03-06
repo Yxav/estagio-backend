@@ -3,7 +3,6 @@ import Knex from 'knex'
 
 import knexConfig from '../../knexfile'
 import { NODE_ENV } from '../config'
-import './Project'
 
 const knex = Knex(knexConfig[NODE_ENV])
 Model.knex(knex)
