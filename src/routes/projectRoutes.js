@@ -1,4 +1,4 @@
-import { Router} from 'express'
+import { Router } from 'express'
 import { celebrate, Joi, errors, Segments } from 'celebrate'
 
 import projectController from '../controllers/projectController'
@@ -15,7 +15,7 @@ router.post('/', celebrate({
     navers: Joi.array()
   })
 
-}) ,projectController.store)
+}), projectController.store)
 
 router.use(errors())
 

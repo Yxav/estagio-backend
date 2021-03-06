@@ -5,21 +5,21 @@ import naverRoutes from './routes/naverRoutes'
 import projectRoutes from './routes/projectRoutes'
 
 
-class App{
-  constructor(){
+class App {
+  constructor() {
     this.app = express()
     this.middlewares()
     this.routes()
   }
 
-  middlewares(){
+  middlewares() {
     this.app.use(express.json());
     this.app.use(express.urlencoded({ extended: false }))
 
 
   }
 
-  routes(){
+  routes() {
     this.app.use('/navers', naverRoutes)
     this.app.use('/projects', projectRoutes)
   }

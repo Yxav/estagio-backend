@@ -1,4 +1,4 @@
-import {Model} from 'objection'
+import { Model } from 'objection'
 import Knex from 'knex'
 
 import { development } from '../../knexfile'
@@ -8,7 +8,7 @@ import './Project'
 Model.knex(Knex(development))
 
 class Naver extends Model {
-  static get tableName(){
+  static get tableName() {
     return 'navers'
   }
 

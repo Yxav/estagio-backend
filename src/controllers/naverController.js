@@ -40,18 +40,18 @@ class naverController {
         admission_date,
       })
 
-      if(projects.length < 1){
-        res.status(200).send({...naver})
+      if (projects.length < 1) {
+        res.status(200).send({ ...naver })
         return
       }
 
-        try {
-          await Naver.relatedQuery('projects')
+      try {
+        await Naver.relatedQuery('projects')
           .for(naver.id)
           .relate(projects);
-        } catch (error) {
-          res.status(400).send({ error: 'Error in register project naver' })
-        }
+      } catch (error) {
+        res.status(400).send({ error: 'Error in register project naver' })
+      }
 
 
       res.status(200).send({
