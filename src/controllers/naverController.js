@@ -35,10 +35,15 @@ class naverController {
 
       const naver = await Naver.query().insert({
         name,
+        job_role,
         birthdate,
         admission_date,
-        job_role,
       })
+
+      if(projects.length < 1){
+        res.status(200).send({...naver})
+        return
+      }
 
         try {
           await Naver.relatedQuery('projects')

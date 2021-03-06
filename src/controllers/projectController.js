@@ -31,6 +31,12 @@ class projectController {
 
       const project = await Project.query().insert({ name })
 
+      if(navers.length < 1){
+        res.status(200).send({...project})
+        return
+      }
+
+
       try {
         await Project.relatedQuery('navers')
           .for(project.id)
