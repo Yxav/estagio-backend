@@ -34,9 +34,16 @@ API construída com Node.JS, PostgreSQL, Express e Objection.
 ## Insomnia
 [![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://raw.githubusercontent.com/Yxav/estagio-backend/main/doc-insomnia?token=ALTR6P4WYTPPKCZPQ26CKBLAILREK)
 
-## Produção
-Esta API se encontra em produção no link: https://teste-nave-yuri-xavier.herokuapp.com/navers
+## Extra
+Esta API se encontra em produção no link: https://teste-nave-yuri-xavier.herokuapp.com/navers <br />
+*A primeira request poderá ser lenta, por conta do sleep mode, devido ao plano de hospedagem free.*
 
+### Dificuldades
+- No exercício 10, de lógica, foram necessárias algumas idas à documentação da linguagem, e analisar alguns exemplos, para o melhor uso de Promises.
+- Na construção da API, também foi necessário algum tempo lendo a documentação do Objection e analisando os exemplos fornecidos pelos mesmos, para encontrar a melhor solução no retorno, por exemplo, de um `naver` e seus respectivos `projects`.
+
+  #### Extra
+  No momento de realizar o deploy, diversas buscas de como integrar o banco de dados fornecido pelo serviço de hospedagem, mas sem sucesso, sendo necessário a    conexão com o banco de dados, de outro serviço.
 
 
 
