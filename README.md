@@ -1,10 +1,13 @@
-# Desafio de Back-end - NAVE
+# Teste de estágio de Back-end - NAVE
+
+## Exercícios de lógica
+
+[Yuri Xavier -Code Sandbox](https://codesandbox.io/s/teste-estagio-yuri-xavier-pswwv) 
+
+## API
 
 Solução do desafio proposto pela Nave, para a vaga de estágio em Back-end.
 API construída com Node.JS, PostgreSQL, Express e Objection.
-
-## Conteúdo
-
 
 
 # Antes de começar
