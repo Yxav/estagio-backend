@@ -38,6 +38,22 @@ API construída com Node.JS, PostgreSQL, Express e Objection.
 Esta API se encontra em produção no link: https://teste-nave-yuri-xavier.herokuapp.com/navers <br />
 *A primeira request poderá ser lenta, por conta do sleep mode, devido ao plano de hospedagem free.*
 
+# API endpoints
+
+## GET
+`/navers` [Index navers](https://teste-nave-yuri-xavier.herokuapp.com/navers) <br/>
+`/navers/:id` [Show naver](https://teste-nave-yuri-xavier.herokuapp.com/navers/30) <br/>
+
+`/projects` [Index projects](https://teste-nave-yuri-xavier.herokuapp.com/projects) <br/>
+`/projects/:id` [Show project](https://teste-nave-yuri-xavier.herokuapp.com/projects/15) <br/>
+
+
+## POST
+
+`/navers` [https://teste-nave-yuri-xavier.herokuapp.com/navers](#) <br/>
+`/projects` [https://teste-nave-yuri-xavier.herokuapp.com/projects](#) <br/>
+
+
 ### Dificuldades
 - No exercício 10, de lógica, foram necessárias algumas idas à documentação da linguagem, e analisar alguns exemplos, para o melhor uso de Promises.
 - Na construção da API, também foi necessário algum tempo lendo a documentação do Objection e analisando os exemplos fornecidos pelos mesmos, para encontrar a melhor solução no retorno, por exemplo, de um `naver` e seus respectivos `projects`.
